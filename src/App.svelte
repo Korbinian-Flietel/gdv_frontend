@@ -1,4 +1,5 @@
 <script>
+  import RangeSlider from "svelte-range-slider-pips";
   import * as d3 from "d3";
   import Chart from "./components/Chart.svelte";
   import TopChart from "./components/topChart.svelte";
@@ -6,6 +7,17 @@
   var citys = [];
   var type = "co";
   var data = [];
+  var floorDate = new Date(
+    new Date().getFullYear() - 5,
+    new Date().getMonth(),
+    new Date().getDate()
+  ).getTime(); // was oben links steht
+  let ceil = new Date(
+    new Date().getFullYear(),
+    new Date().getMonth(),
+    new Date().getDate()
+  ).getTime();
+  let values = [ceil - 7890000000, ceil];
 
   var reach_down = new Map();
 
@@ -65,9 +77,19 @@
       <option value="co">co</option>
       <option value="pm10">pm10</option>
     </select>
+    <RangeSlider
+      bind:values
+      formatter={(v) => new Date(v).toLocaleDateString("en-US")}
+      min={floorDate}
+      max={ceil}
+      range
+      pips
+      step={7890000000 * 2}
+      all="label"
+    />
   </div>
   <TopChart {data} type={t} />
-  <Chart data={reach_down} />
+  <Chart data={reach_down} type={t} />
 </main>
 
 <style>

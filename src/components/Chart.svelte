@@ -1,6 +1,7 @@
 <script>
   import { onMount, afterUpdate, onDestroy } from "svelte";
   export let data;
+  export let type;
 
   let s = 0;
 
@@ -22,5 +23,6 @@
   {:else}
     <p>No Data!</p>
   {/if}
+  <p>{type}</p>
   <p>{s}</p>
 </div>
