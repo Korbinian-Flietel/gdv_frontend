@@ -4,9 +4,9 @@
   import Chart from "./components/Chart.svelte";
   import TopChart from "./components/topChart.svelte";
 
-  var citys = [];
   var type = "co";
   var data = [];
+  var domain = [];
   var floorDate = new Date(
     new Date().getFullYear() - 5,
     new Date().getMonth(),
@@ -36,6 +36,7 @@
         (d) => d.timeSeriesId
       );
       data = tmp;
+      getDomain(type);
       console.log(data);
     });
   };
@@ -47,6 +48,7 @@
   function update(type) {
     t = document.getElementById("select").options[select.selectedIndex].value;
     type = t;
+    getDomain(type);
   }
 
   function togleData(k) {
@@ -58,11 +60,30 @@
       reach_down = reach_down;
     }
   }
+
+  function getDomain(s) {
+    var max = 0;
+    for (const [key, value] of data.entries()) {
+      var p = Math.max.apply(
+        Math,
+        value.get(s).map(function (o) {
+          return o.value;
+        })
+      );
+      console.log(p);
+      if (max < p) {
+        max = p;
+      }
+      console.log(max);
+    }
+    domain = [0, max];
+  }
 </script>
 
 <main>
   <h1 class="header">Team Yellow!</h1>
   <div class="main">
+    <p>{domain}</p>
     <div id="checkboxes">
       <label>Citys</label>
       <ul style="list-style-type:none;">
@@ -89,7 +110,7 @@
     />
   </div>
   <TopChart {data} type={t} />
-  <Chart data={reach_down} type={t} />
+  <Chart data={reach_down} type={t} dates={values} {domain} />
 </main>
 
 <style>
