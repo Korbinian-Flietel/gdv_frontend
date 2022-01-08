@@ -7,17 +7,19 @@
   var type = "co";
   var data = [];
   var domain = [];
-  var floorDate = new Date(
-    new Date().getFullYear() - 5,
-    new Date().getMonth(),
-    new Date().getDate()
-  ).getTime(); // was oben links steht
-  let ceil = new Date(
-    new Date().getFullYear(),
-    new Date().getMonth(),
-    new Date().getDate()
-  ).getTime();
-  let values = [ceil - 7890000000, ceil];
+  var floorDate =
+    new Date(
+      new Date().getFullYear() - 5,
+      new Date().getMonth(),
+      new Date().getDate()
+    ).getTime() / 1000; // was oben links steht
+  let ceil =
+    new Date(
+      new Date().getFullYear(),
+      new Date().getMonth(),
+      new Date().getDate()
+    ).getTime() / 1000;
+  let values = [ceil - 7890000, ceil];
 
   var reach_down = new Map();
 
@@ -100,12 +102,12 @@
     </select>
     <RangeSlider
       bind:values
-      formatter={(v) => new Date(v).toLocaleDateString("en-US")}
+      formatter={(v) => new Date(v * 1000).toLocaleDateString("en-US")}
       min={floorDate}
       max={ceil}
       range
       pips
-      step={7890000000 * 2}
+      step={7890000 * 2}
       all="label"
     />
   </div>

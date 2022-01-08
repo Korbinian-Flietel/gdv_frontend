@@ -1,9 +1,10 @@
 <script>
   import * as d3 from "d3";
+  import { fade } from "svelte/transition";
   import Axes from "./Axes.svelte";
   import Defs from "./Defs.svelte";
+  import Line from "./Line.svelte";
 
-  import { onMount, afterUpdate, onDestroy } from "svelte";
   export let data;
   export let type;
   export let dates;
@@ -12,6 +13,13 @@
   let w;
   let h;
   let s = 0;
+
+  var colorCode = {
+    Mannheim: "#F0431E",
+    München: "#EDF01E",
+    Berlin: "#44F01E",
+    Stuttgart: "#1E37F0",
+  };
 
   $: valueScale = d3
     .scaleLinear()
@@ -66,8 +74,26 @@
         {type}
         show={data.size > 0}
       />
+      {#each Array.from(data.values()) as city}
+        <Line
+          {dateScale}
+          {valueScale}
+          data={city.get(type).filter(function (el) {
+            return el.timeStamp >= dates[0] && el.timeStamp <= dates[1];
+          })}
+          {colorCode}
+        />
+      {/each}
     </svg>
+    <ul class="city-labels">
+      {#each Array.from(data.keys()) as c}
+        <li class="city" style="color: {colorCode[c]};" transition:fade>
+          {c}
+        </li>
+      {/each}
+    </ul>
   {:else}
+    <p>{dates}</p>
     <p>{domain}</p>
     <p>No Data!</p>
   {/if}
@@ -77,5 +103,18 @@
   svg {
     width: 100%;
     height: 100%;
+  }
+
+  .city-labels {
+    position: absolute;
+    list-style: none;
+    text-align: right;
+    right: 4vw;
+    top: 2.5vh;
+    width: 100%;
+  }
+
+  .city {
+    margin-left: 0px;
   }
 </style>

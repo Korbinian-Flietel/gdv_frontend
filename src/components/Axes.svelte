@@ -18,7 +18,9 @@
     <g class="axis-age" transform="translate(0 {valueScale.range()[0]})">
       {#each dateTicks as tick}
         <g transform="translate({dateScale(tick)} 0)">
-          <text x="0" y="0">{new Date(tick).toLocaleDateString("en-US")}</text>
+          <text x="0" y="0"
+            >{new Date(tick * 1000).toLocaleDateString("en-US")}</text
+          >
           <line x1="0" y1="-12" x2="0" y2="-21" />
         </g>
       {/each}
@@ -54,6 +56,7 @@
   .axis-temp line.faint {
     stroke-opacity: 0.05;
   }
+
   text {
     font-family: "Source Sans Pro", sans-serif;
     font-size: 0.8rem;
