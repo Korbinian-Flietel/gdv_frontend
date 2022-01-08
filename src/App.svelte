@@ -24,7 +24,7 @@
   var reach_down = new Map();
 
   const load = () => {
-    d3.json("https://gdv-api.herokuapp.com/get_mvv_data?typ=co,pm10", (d) => {
+    d3.json("https://gdv-api.herokuapp.com/get_cached_data", (d) => {
       return {
         city: d.city,
         id: d.timeSeriesId,
@@ -99,6 +99,9 @@
     <select id="select" on:change={update({ t })}>
       <option value="co">co</option>
       <option value="pm10">pm10</option>
+      <option value="o3">o3</option>
+      <option value="so2">so2</option>
+      <option value="no2">no2</option>
     </select>
     <RangeSlider
       bind:values
