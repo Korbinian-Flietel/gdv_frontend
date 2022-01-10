@@ -63,35 +63,38 @@
 
 <div class="bottom_chart" bind:clientHeight={h} bind:clientWidth={w}>
   {#if data.size > 0}
-    <svg xmlns="http://www.w3.org/2000/svg" width={w} height={h}>
-      <Defs />
-      <Axes
-        {dateScale}
-        {valueScale}
-        width={w}
-        dateTicks={createTicks(dates)}
-        valueTicks={createTicks(domain)}
-        {type}
-        show={data.size > 0}
-      />
-      {#each Array.from(data.values()) as city}
-        <Line
+    {#if data.keys().next().value}
+      <svg xmlns="http://www.w3.org/2000/svg" width={w} height={h}>
+        <Defs />
+        <Axes
           {dateScale}
           {valueScale}
-          data={city.get(type).filter(function (el) {
-            return el.timeStamp >= dates[0] && el.timeStamp <= dates[1];
-          })}
-          {colorCode}
+          width={w}
+          dateTicks={createTicks(dates)}
+          valueTicks={createTicks(domain)}
+          {type}
+          show={data.size > 0}
         />
-      {/each}
-    </svg>
-    <ul class="city-labels">
-      {#each Array.from(data.keys()) as c}
-        <li class="city" style="color: {colorCode[c]};" transition:fade>
-          {c}
-        </li>
-      {/each}
-    </ul>
+        {console.log(data)}
+        {#each Array.from(data.values()) as city}
+          <Line
+            {dateScale}
+            {valueScale}
+            data={city.get(type).filter(function (el) {
+              return el.timeStamp >= dates[0] && el.timeStamp <= dates[1];
+            })}
+            {colorCode}
+          />
+        {/each}
+      </svg>
+      <ul class="city-labels">
+        {#each Array.from(data.keys()) as c}
+          <li class="city" style="color: {colorCode[c]};" transition:fade>
+            {c}
+          </li>
+        {/each}
+      </ul>
+    {/if}
   {:else}
     <p>{dates}</p>
     <p>{domain}</p>
