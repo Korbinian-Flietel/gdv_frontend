@@ -4,7 +4,7 @@
   import Chart from "./components/Chart.svelte";
   import TopChart from "./components/topChart.svelte";
 
-  var type = "co";
+  var type = "pm10";
   let w = 0;
   let h = 0;
   var data = [];
@@ -45,7 +45,7 @@
     });
   };
 
-  var t = "co";
+  var t = "pm10";
 
   load();
 
@@ -179,24 +179,26 @@
             title="Thuringia"
             id="DE-TH"
           />
-          <rect
-            id="Mannheim"
-            on:click={togle}
-            x="85"
-            y="520"
-            width="25"
-            height="25"
-            fill="#F0431E"
-            stroke="#FFF"
-            style="stroke-width:3;"
-          />
+          <g>
+            <rect
+              id="Mannheim"
+              on:click={togle}
+              x="60"
+              y="500"
+              width="50"
+              height="50"
+              fill="#F0431E"
+              stroke="#FFF"
+              style="stroke-width:3;"
+            />
+          </g>
           <rect
             id="Stuttgart"
             on:click={togle}
             x="115"
             y="560"
-            width="25"
-            height="25"
+            width="50"
+            height="50"
             fill="#1E37F0"
             stroke="#FFF"
             style="stroke-width:3;"
@@ -206,16 +208,16 @@
             on:click={togle}
             x="385"
             y="680"
-            width="25"
-            height="25"
+            width="50"
+            height="50"
             fill="#EDF01E"
             stroke="#FFF"
             style="stroke-width:3;"
           />
         </svg>
         <select id="select" on:change={update({ t })}>
-          <option value="co">co</option>
           <option value="pm10">pm10</option>
+          <option value="co">co</option>
           <option value="o3">o3</option>
           <option value="so2">so2</option>
           <option value="no2">no2</option>
@@ -235,7 +237,7 @@
       </div>
       <p>{domain}</p>
     </div>
-    <TopChart {data} type={t} />
+    <TopChart {data} type={t} {domain} />
     <Chart data={reach_down} type={t} dates={values} {domain} />
   </main>
 {:else}

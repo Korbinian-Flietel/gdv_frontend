@@ -96,6 +96,13 @@
       </ul>
     {/if}
   {:else}
+    <div>
+      // Hier wird solange keine Stadt zum auswählen angewählt wurde eine
+      Beschreibung der WEbsite un der Interaktionen in Schriftform angezeigt
+      werden. <br />// Der Text ist noch nicht ausgearbeitet deshalb steht hier
+      nur dieser Platzhalter und ein Paar Informationen die Nützlich für die
+      Programmierung sind.
+    </div>
     <p>{dates}</p>
     <p>{domain}</p>
     <p>No Data!</p>
