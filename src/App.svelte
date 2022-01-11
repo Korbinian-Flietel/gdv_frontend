@@ -179,19 +179,19 @@
             title="Thuringia"
             id="DE-TH"
           />
-          <g>
-            <rect
-              id="Mannheim"
-              on:click={togle}
-              x="60"
-              y="500"
-              width="50"
-              height="50"
-              fill="#F0431E"
-              stroke="#FFF"
-              style="stroke-width:3;"
-            />
-          </g>
+
+          <rect
+            id="Mannheim"
+            on:click={togle}
+            x="60"
+            y="500"
+            width="50"
+            height="50"
+            fill="#F0431E"
+            stroke="#FFF"
+            style="stroke-width:3;"
+          />
+
           <rect
             id="Stuttgart"
             on:click={togle}
@@ -226,7 +226,7 @@
         <RangeSlider
           id="color-pips"
           bind:values
-          formatter={(v) => new Date(v * 1000).toLocaleDateString("en-US")}
+          formatter={(v) => new Date(v * 1000).toLocaleDateString("de-DE")}
           min={floorDate}
           max={ceil}
           range
@@ -235,7 +235,6 @@
           all="label"
         />
       </div>
-      <p>{domain}</p>
     </div>
     <TopChart {data} type={t} {domain} />
     <Chart data={reach_down} type={t} dates={values} {domain} />
@@ -257,7 +256,10 @@
   #Stuttgart:hover {
     cursor: pointer;
   }
-  #Mannheim {
+  #Mannheim:hover {
+    cursor: pointer;
+  }
+  #München:hover {
     cursor: pointer;
   }
   main {

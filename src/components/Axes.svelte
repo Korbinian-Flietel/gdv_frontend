@@ -15,17 +15,17 @@
       class="label"
       transform="translate(15 {valueScale.range()[0]}) rotate(-90)">Time</text
     >
-    <g class="axis-age" transform="translate(0 {valueScale.range()[0]})">
+    <g class="axis-date" transform="translate(0 {valueScale.range()[0]})">
       {#each dateTicks as tick}
         <g transform="translate({dateScale(tick)} 0)">
           <text x="0" y="0"
-            >{new Date(tick * 1000).toLocaleDateString("en-US")}</text
+            >{new Date(tick * 1000).toLocaleDateString("de-De")}</text
           >
           <line x1="0" y1="-12" x2="0" y2="-21" />
         </g>
       {/each}
     </g>
-    <g class="axis-temp">
+    <g class="axis-value">
       <text
         class="label"
         transform="translate(15 {valueScale(valueTicks[5])}) rotate(-90)"
@@ -53,7 +53,7 @@
     stroke-width: 0.2vmin;
     stroke-opacity: 0.1;
   }
-  .axis-temp line.faint {
+  .axis-value line.faint {
     stroke-opacity: 0.05;
   }
 
@@ -63,10 +63,10 @@
     fill: var(--purple);
     fill-opacity: 0.4;
   }
-  .axis-age text {
+  .axis-date text {
     text-anchor: middle;
   }
-  .axis-temp text {
+  .axis-value text {
     text-anchor: start;
   }
   text.label {

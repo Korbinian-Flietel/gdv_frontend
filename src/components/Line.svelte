@@ -21,20 +21,22 @@
 </script>
 
 <g class="temperature-line">
-  <path
-    class="line-blur to-blur"
-    d={line(data)}
-    stroke={colorCode[data[0].city]}
-    transition:move
-    use:transparentStroke={{ duration: 3000, delay: 5000 }}
-  />
+  {#if data[0]}
+    <path
+      class="line-blur to-blur"
+      d={line(data)}
+      stroke={colorCode[data[0].city]}
+      transition:move
+      use:transparentStroke={{ duration: 3000, delay: 5000 }}
+    />
 
-  <path
-    class="line to-blur"
-    d={line(data)}
-    transition:move
-    use:transparentStroke={{ duration: 3000, delay: 5000 }}
-  />
+    <path
+      class="line to-blur"
+      d={line(data)}
+      transition:move
+      use:transparentStroke={{ duration: 3000, delay: 5000 }}
+    />
+  {/if}
 </g>
 
 <style>

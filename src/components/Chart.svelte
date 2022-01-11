@@ -1,9 +1,11 @@
 <script>
   import * as d3 from "d3";
+  import { update_await_block_branch } from "svelte/internal";
   import { fade } from "svelte/transition";
   import Axes from "./Axes.svelte";
   import Defs from "./Defs.svelte";
   import Line from "./Line.svelte";
+  import Tooltip from "./Tooltip.svelte";
 
   export let data;
   export let type;
@@ -12,7 +14,6 @@
 
   let w;
   let h;
-  let s = 0;
 
   var colorCode = {
     Mannheim: "#F0431E",
@@ -30,6 +31,8 @@
     .scaleLinear()
     .domain(dates)
     .range([w * 0.03, w * 0.97]);
+
+  $: yScale = d3.scaleLinear().domain([h, 0]).range([0, h]);
 
   function createTicks(d) {
     var diff = d[1] - d[0];
@@ -59,12 +62,70 @@
 
     return result;
   }
+
+  let is_inside = true;
+  let x;
+  let y;
+  $: current_ma = (x) => {
+    var goal = Math.floor(dateScale.invert(x));
+    let r = new Map();
+    for (const [key, value] of data.entries()) {
+      r.set(
+        key,
+        value.get(type).reduce(function (prev, curr) {
+          return Math.abs(curr.timeStamp - goal) <
+            Math.abs(prev.timeStamp - goal)
+            ? curr
+            : prev;
+        }).value
+      );
+    }
+
+    return r;
+  };
+
+  function inside() {
+    is_inside = true;
+  }
+
+  function outside() {
+    is_inside = false;
+  }
+
+  function handleMousemove(event) {
+    x = event.clientX - 8;
+    y = window.innerHeight - event.clientY;
+  }
+
+  /*function handleMousemove() {
+    var goal = Math.floor(dateScale.invert(event.clientX - 8));
+    v = data
+      .get("Mannheim")
+      .get(type)
+      .reduce(function (prev, curr) {
+        return Math.abs(curr.timeStamp - goal) < Math.abs(prev.timeStamp - goal)
+          ? curr
+          : prev;
+      }).value;
+  }*/
 </script>
 
-<div class="bottom_chart" bind:clientHeight={h} bind:clientWidth={w}>
+<div
+  class="bottom_chart"
+  bind:clientHeight={h}
+  bind:clientWidth={w}
+  on:mousemove={handleMousemove}
+>
   {#if data.size > 0}
     {#if data.keys().next().value}
-      <svg xmlns="http://www.w3.org/2000/svg" width={w} height={h}>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        id="test"
+        width={w}
+        height={h}
+        on:mouseenter={inside}
+        on:mouseleave={outside}
+      >
         <Defs />
         <Axes
           {dateScale}
@@ -75,7 +136,6 @@
           {type}
           show={data.size > 0}
         />
-        {console.log(data)}
         {#each Array.from(data.values()) as city}
           <Line
             {dateScale}
@@ -86,6 +146,16 @@
             {colorCode}
           />
         {/each}
+        <Tooltip
+          {is_inside}
+          {current_ma}
+          {type}
+          {dateScale}
+          {colorCode}
+          {yScale}
+          {x}
+          {y}
+        />
       </svg>
       <ul class="city-labels">
         {#each Array.from(data.keys()) as c}

@@ -28,7 +28,6 @@
     {#each [...data] as [k, v]}
       <div id={k} bind:clientHeight={h} bind:clientWidth={w}>
         <Minichart
-          id={k}
           height={h}
           width={w}
           {valueScale}
