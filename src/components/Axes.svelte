@@ -4,6 +4,7 @@
   export let valueScale;
   export let width;
   export let dateTicks;
+  export let mini = false;
   export let show = false;
   export let type;
   export let valueTicks = [];
@@ -17,12 +18,21 @@
     >
     <g class="axis-age" transform="translate(0 {valueScale.range()[0]})">
       {#each dateTicks as tick}
+      {#if !mini}
         <g transform="translate({dateScale(tick)} 0)">
           <text x="0" y="0"
             >{new Date(tick * 1000).toLocaleDateString("en-US")}</text
           >
           <line x1="0" y1="-12" x2="0" y2="-21" />
         </g>
+        {:else}
+        <g transform="translate({dateScale(tick)} 0)">
+          <text x="0" y="0"
+            >{new Date(tick * 1000).toLocaleDateString(undefined, {month: "short", day: "numeric"} )}</text
+          >
+          <line x1="0" y1="-12" x2="0" y2="-21" />
+        </g>
+        {/if}
       {/each}
     </g>
     <g class="axis-temp">

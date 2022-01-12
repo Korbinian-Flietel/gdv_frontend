@@ -46,6 +46,7 @@
   <Axes
     {dateScale}
     {valueScale}
+    mini = {true}
     {width}
     dateTicks={createTicks([1546300800, 1577836799])}
     valueTicks={createTicks(domain)}
