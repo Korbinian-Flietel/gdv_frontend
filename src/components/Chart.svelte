@@ -63,7 +63,7 @@
     return result;
   }
 
-  let is_inside = true;
+  let is_inside = false;
   let x;
   let y;
   $: current_ma = (x) => {
@@ -84,8 +84,8 @@
     return r;
   };
 
-  function inside() {
-    is_inside = true;
+  function toggle_inside() {
+    is_inside = !is_inside;
   }
 
   function outside() {
@@ -123,7 +123,7 @@
         id="test"
         width={w}
         height={h}
-        on:mouseenter={inside}
+        on:click={toggle_inside}
         on:mouseleave={outside}
       >
         <Defs />
