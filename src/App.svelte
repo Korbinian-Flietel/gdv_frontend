@@ -23,6 +23,8 @@
     ).getTime() / 1000;
   let values = [ceil - 7890000, ceil];
 
+  $: values && getDomain(type);
+
   var reach_down = new Map();
 
   const load = () => {
@@ -71,7 +73,11 @@
       var p = Math.max.apply(
         Math,
         value.get(s).map(function (o) {
-          return o.value;
+          if (o.timeStamp < values[1] && o.timeStamp > values[0]) {
+            return o.value;
+          } else {
+            return 0;
+          }
         })
       );
       console.log(p);
