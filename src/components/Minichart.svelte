@@ -1,6 +1,7 @@
 <script>
   import * as d3 from "d3";
   import { fade } from "svelte/transition";
+  import MiniLine from "./MiniLine.svelte";
   import Axes from "./Axes.svelte";
   import Defs from "./Defs.svelte";
   export let valueScale;
@@ -46,11 +47,14 @@
   <Axes
     {dateScale}
     {valueScale}
-    mini = {true}
+    mini={true}
     {width}
     dateTicks={createTicks([1546300800, 1577836799])}
     valueTicks={createTicks(domain)}
     {type}
     show={data.size > 0}
   />
+  {#each Array.from(data.keys()) as year}
+    <MiniLine {dateScale} {valueScale} {year} data={data.get(year)} />
+  {/each}
 </svg>

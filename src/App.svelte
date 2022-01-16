@@ -9,6 +9,7 @@
   let h = 0;
   var data = [];
   var domain = [];
+  var m = [];
   var floorDate =
     new Date(
       new Date().getFullYear() - 3,
@@ -42,6 +43,7 @@
         (d) => d.timeSeriesId
       );
       data = tmp;
+      getMax(type);
       getDomain(type);
       console.log(data);
     });
@@ -54,6 +56,7 @@
   function update(type) {
     t = document.getElementById("select").options[select.selectedIndex].value;
     type = t;
+    getMax(type);
     getDomain(type);
   }
 
@@ -67,6 +70,23 @@
       reach_down = reach_down;
     }
   }
+
+  function getMax(s) {
+    var max = 0;
+    for (const [key, value] of data.entries()) {
+      var p = Math.max.apply(
+        Math,
+        value.get(s).map(function (o) {
+          return o.value;
+        })
+      );
+      if (max < p) {
+        max = p;
+      }
+    }
+    m = [0, max];
+  }
+
   function getDomain(s) {
     var max = 0;
     for (const [key, value] of data.entries()) {
@@ -242,7 +262,7 @@
         />
       </div>
     </div>
-    <TopChart {data} type={t} {domain} />
+    <TopChart data={new Map(data)} type={t} domain={m} />
     <Chart data={reach_down} type={t} dates={values} {domain} />
   </main>
 {:else}

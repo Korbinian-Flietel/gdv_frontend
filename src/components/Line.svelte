@@ -13,11 +13,6 @@
     .x((d) => dateScale(d.timeStamp))
     .y((d) => valueScale(d.value))
     .curve(d3.curveBasis);
-
-  $: maxDate = d3.max(data.map((d) => d.timeStamp));
-  $: minDate = d3.min(data.map((d) => d.timeStamp));
-  $: maxValue = d3.max(data.map((d) => d.value));
-  $: minValue = d3.min(data.map((d) => d.value));
 </script>
 
 <g class="temperature-line">
