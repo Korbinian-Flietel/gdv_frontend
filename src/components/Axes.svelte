@@ -6,7 +6,10 @@
   export let dateTicks;
   export let mini = false;
   export let show = false;
+  export let years;
+  export let dashCode;
   export let type;
+  export let city;
   export let valueTicks = [];
 </script>
 
@@ -15,26 +18,52 @@
     <text
       class="label"
       transform="translate(15 {valueScale.range()[0]}) rotate(-90)">Time</text
-    >
+    >{#if mini}
+      <text
+        class={city}
+        transform="translate({dateScale.range()[1] / 2} {valueScale.range()[1] *
+          0.9})">{city}</text
+      >
+      {#each years as year, i}
+        <g class="year-{year}">
+          <text
+            class={year}
+            transform="translate({dateScale.range()[1] *
+              0.99} {valueScale.range()[1] * 0.9 + i * 20})">{year}</text
+          >
+          <line
+            x1={dateScale.range()[1] * 0.99 - 30}
+            y1={valueScale.range()[1] * 0.9 - 4 + i * 20}
+            x2={dateScale.range()[1] * 0.99 - 5}
+            y2={valueScale.range()[1] * 0.9 - 4 + i * 20}
+            stroke-dasharray={dashCode[year]}
+          /></g
+        >
+      {/each}
+    {/if}
     <g class="axis-date" transform="translate(0 {valueScale.range()[0]})">
       {#each dateTicks as tick}
-      {#if mini}
-        <g transform="translate({dateScale(tick)} 0)">
-        <text x="0" y="0"
-          >{new Date(tick * 1000).toLocaleDateString(undefined, {month: "short", day: "numeric"} )}</text
-        >
-        <line x1="0" y1="-12" x2="0" y2="-21" />
-        </g>       
+        {#if mini}
+          <g transform="translate({dateScale(tick)} 0)">
+            <text x="0" y="0"
+              >{new Date(tick * 1000).toLocaleDateString(undefined, {
+                month: "short",
+                day: "numeric",
+              })}</text
+            >
+            <line x1="0" y1="-12" x2="0" y2="-21" />
+          </g>
         {:else}
           <g transform="translate({dateScale(tick)} 0)">
-          <text x="0" y="0"
-            >{new Date(tick * 1000).toLocaleDateString("de-De")}</text
-          >
-          <line x1="0" y1="-12" x2="0" y2="-21" />
+            <text x="0" y="0"
+              >{new Date(tick * 1000).toLocaleDateString("de-De")}</text
+            >
+            <line x1="0" y1="-12" x2="0" y2="-21" />
           </g>
         {/if}
       {/each}
     </g>
+
     <g class="axis-value">
       <text
         class="label"
@@ -63,6 +92,47 @@
     stroke-width: 0.2vmin;
     stroke-opacity: 0.1;
   }
+
+  .year-2019 line {
+    stroke: #f88379;
+    stroke-width: 0.2vmin;
+    stroke-opacity: 1;
+  }
+
+  .year-2019 text {
+    fill: #f88379;
+  }
+
+  .year-2020 line {
+    stroke: #ff3131;
+    stroke-width: 0.2vmin;
+    stroke-opacity: 1;
+  }
+
+  .year-2020 text {
+    fill: #ff3131;
+  }
+
+  .year-2021 line {
+    stroke: #a52a2a;
+    stroke-width: 0.2vmin;
+    stroke-opacity: 1;
+  }
+
+  .year-2021 text {
+    fill: #a52a2a;
+  }
+
+  .year-2022 line {
+    stroke: #630330;
+    stroke-width: 0.2vmin;
+    stroke-opacity: 1;
+  }
+
+  .year-2022 text {
+    fill: #630330;
+  }
+
   .axis-value line.faint {
     stroke-opacity: 0.05;
   }

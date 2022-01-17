@@ -9,6 +9,7 @@
 
   var d = _.cloneDeep(data);
   var reach_down = new Map();
+  let mini_domain = new Map();
   let s = 0;
   let h;
   let w;
@@ -74,7 +75,53 @@
       }
       reach_down = reach_down;
     }
+    get_mini_domain(reach_down);
+    console.log(mini_domain);
   }
+
+  function get_mini_domain(v) {
+    var sum = 0;
+    var elements = 0;
+    console.log(v);
+    for (const [ke, va] of v.entries()) {
+      var c = new Map();
+      var max = 0;
+
+      for (const [k, v] of va.get(type)) {
+        console.log(v);
+        var p = v.reduce(function (a, b) {
+          return a + b.value;
+        }, 0);
+
+        sum += p;
+        elements += v.length;
+
+        var contender = v.reduce(
+          function (prev, curr) {
+            return curr.value > prev.value ? curr : prev;
+          },
+          { value: 0 }
+        ).value;
+        if (max < contender) {
+          max = contender;
+        }
+      }
+      let avr = sum / elements;
+      if (max > avr * 10) {
+        mini_domain.set(ke, c.set(type, [0, avr * 10]));
+      } else {
+        mini_domain.set(ke, c.set(type, [0, max]));
+      }
+    }
+    mini_domain = mini_domain;
+  }
+
+  var colorCode = {
+    Mannheim: "#F0431E",
+    München: "#EDF01E",
+    Berlin: "#44F01E",
+    Stuttgart: "#1E37F0",
+  };
 </script>
 
 <div class="chart">
@@ -82,11 +129,13 @@
     {#each [...reach_down] as [k, v]}
       <div id={k} bind:clientHeight={h} bind:clientWidth={w}>
         <Minichart
+          city={k}
           height={h}
           width={w}
-          {valueScale}
+          {h}
           {dateScale}
-          {domain}
+          colorCode={colorCode[k]}
+          domain={mini_domain.get(k).get(type)}
           {type}
           data={v.get(type)}
         />
@@ -99,26 +148,26 @@
 
 <style>
   #Mannheim {
-    width: 45%;
+    width: 49%;
+    height: 50%;
+    float: left;
+    margin-top: 0;
+  }
+  #Stuttgart {
+    width: 49%;
     height: 50%;
     float: left;
     margin-top: 0;
     left: 15px;
   }
-  #Stuttgart {
-    width: 45%;
-    height: 50%;
-    float: left;
-    margin-top: 0;
-  }
   #München {
-    width: 45%;
+    width: 49%;
     height: 50%;
     float: left;
     margin-top: 0;
   }
   #Berlin {
-    width: 45%;
+    width: 49%;
     height: 50%;
     float: left;
     margin-top: 0;

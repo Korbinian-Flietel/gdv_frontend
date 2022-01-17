@@ -45,10 +45,10 @@
   }
   path.line {
     stroke: var(--purple);
-    stroke-width: 2px;
+    stroke-width: 3px;
   }
   path.line-blur {
-    stroke-width: 2px;
+    stroke-width: 3px;
     filter: url(#filter-blur);
   }
 </style>

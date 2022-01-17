@@ -4,13 +4,33 @@
   import MiniLine from "./MiniLine.svelte";
   import Axes from "./Axes.svelte";
   import Defs from "./Defs.svelte";
-  export let valueScale;
+  export let city;
+  export let h;
   export let dateScale;
   export let domain;
   export let height;
   export let data;
   export let type;
   export let width;
+
+  $: valueScale = d3
+    .scaleLinear()
+    .domain(domain)
+    .range([h * 0.95, h * 0.2]);
+
+  var dashCode = {
+    2019: "3, 3",
+    2020: "2, 2",
+    2021: "1.5, 1.5",
+    2022: "0",
+  };
+
+  var colorCode = {
+    2019: "#F88379",
+    2020: "#FF3131",
+    2021: "#A52A2A",
+    2022: "#630330",
+  };
 
   function createTicks(d) {
     var diff = d[1] - d[0];
@@ -48,6 +68,9 @@
     {dateScale}
     {valueScale}
     mini={true}
+    years={Array.from(data.keys())}
+    {dashCode}
+    {city}
     {width}
     dateTicks={createTicks([1546300800, 1577836799])}
     valueTicks={createTicks(domain)}
@@ -55,6 +78,13 @@
     show={data.size > 0}
   />
   {#each Array.from(data.keys()) as year}
-    <MiniLine {dateScale} {valueScale} {year} data={data.get(year)} />
+    <MiniLine
+      {dateScale}
+      {valueScale}
+      {colorCode}
+      {dashCode}
+      {year}
+      data={data.get(year)}
+    />
   {/each}
 </svg>

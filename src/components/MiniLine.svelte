@@ -1,18 +1,12 @@
 <script>
   import * as d3 from "d3";
 
-  import { move } from "./move.js";
   export let dateScale;
   export let valueScale;
   export let data;
   export let year;
-
-  var colorCode = {
-    2019: "#F0431E",
-    2020: "#EDF01E",
-    2021: "#44F01E",
-    2022: "#1E37F0",
-  };
+  export let colorCode;
+  export let dashCode;
 
   $: line = d3
     .line()
@@ -26,8 +20,8 @@
     <path
       class="mini-line"
       stroke={colorCode[year]}
+      stroke-dasharray={dashCode[year]}
       d={line(data)}
-      transition:move
     />
   {/if}
 </g>
@@ -38,8 +32,7 @@
     fill: none;
   }
   path.mini-line {
-    stroke-dasharray: 10, 10;
-    stroke-width: 1px;
+    stroke-width: 1.5px;
   }
   path.line-blur {
     stroke-width: 2px;
