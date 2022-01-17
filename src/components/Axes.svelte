@@ -29,12 +29,12 @@
           <text
             class={year}
             transform="translate({dateScale.range()[1] * 0.99 -
-              4} {valueScale.range()[1] * 0.9 + i * 20})">{year}</text
+              7} {valueScale.range()[1] * 0.9 + i * 20})">{year}</text
           >
           <line
-            x1={dateScale.range()[1] * 0.99 - 34}
+            x1={dateScale.range()[1] * 0.99 - 37}
             y1={valueScale.range()[1] * 0.9 - 4 + i * 20}
-            x2={dateScale.range()[1] * 0.99 - 9}
+            x2={dateScale.range()[1] * 0.99 - 12}
             y2={valueScale.range()[1] * 0.9 - 4 + i * 20}
             stroke-dasharray={dashCode[year]}
           /></g
