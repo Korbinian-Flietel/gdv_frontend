@@ -28,8 +28,8 @@
     <path
       class="line to-blur"
       d={line(data)}
+      stroke={colorCode[data[0].city]}
       transition:move
-      use:transparentStroke={{ duration: 3000, delay: 5000 }}
     />
   {/if}
 </g>
@@ -44,8 +44,8 @@
     fill: none;
   }
   path.line {
-    stroke: var(--purple);
-    stroke-width: 3px;
+    /*stroke: var(--purple);*/
+    stroke-width: 2px;
   }
   path.line-blur {
     stroke-width: 3px;

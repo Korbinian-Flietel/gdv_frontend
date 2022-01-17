@@ -17,9 +17,9 @@
 
   var colorCode = {
     Mannheim: "#F0431E",
-    München: "#EDF01E",
-    Berlin: "#44F01E",
-    Stuttgart: "#1E37F0",
+    München: "#f28500",
+    Berlin: "#008000",
+    Stuttgart: "#0000FF",
   };
 
   $: valueScale = d3
