@@ -25,7 +25,7 @@
           0.9})">{city}</text
       >
       {#each years as year, i}
-        <g class="year-{year}">
+        <g class="year-{year}-{city}">
           <text
             class={year}
             transform="translate({dateScale.range()[1] * 0.99 -
@@ -93,44 +93,164 @@
     stroke-opacity: 0.1;
   }
 
-  .year-2019 line {
+  .year-2019-Mannheim line {
     stroke: #f88379;
     stroke-width: 0.2vmin;
     stroke-opacity: 1;
   }
 
-  .year-2019 text {
+  .year-2019-Mannheim text {
     fill: #f88379;
   }
 
-  .year-2020 line {
+  .year-2020-Mannheim line {
     stroke: #ff3131;
     stroke-width: 0.2vmin;
     stroke-opacity: 1;
   }
 
-  .year-2020 text {
+  .year-2020-Mannheim text {
     fill: #ff3131;
   }
 
-  .year-2021 line {
+  .year-2021-Mannheim line {
     stroke: #a52a2a;
     stroke-width: 0.2vmin;
     stroke-opacity: 1;
   }
 
-  .year-2021 text {
+  .year-2021-Mannheim text {
     fill: #a52a2a;
   }
 
-  .year-2022 line {
+  .year-2022-Mannheim line {
     stroke: #630330;
     stroke-width: 0.2vmin;
     stroke-opacity: 1;
   }
 
-  .year-2022 text {
+  .year-2022-Mannheim text {
     fill: #630330;
+  }
+
+  .year-2019-Stuttgart line {
+    stroke: #add8e6;
+    stroke-width: 0.2vmin;
+    stroke-opacity: 1;
+  }
+
+  .year-2019-Stuttgart text {
+    fill: #add8e6;
+  }
+
+  .year-2020-Stuttgart line {
+    stroke: #7fffd4;
+    stroke-width: 0.2vmin;
+    stroke-opacity: 1;
+  }
+
+  .year-2020-Stuttgart text {
+    fill: #7fffd4;
+  }
+
+  .year-2021-Stuttgart line {
+    stroke: #00bfff;
+    stroke-width: 0.2vmin;
+    stroke-opacity: 1;
+  }
+
+  .year-2021-Stuttgart text {
+    fill: #00bfff;
+  }
+
+  .year-2022-Stuttgart line {
+    stroke: #00008b;
+    stroke-width: 0.2vmin;
+    stroke-opacity: 1;
+  }
+
+  .year-2022-Stuttgart text {
+    fill: #00008b;
+  }
+
+  .year-2019-Berlin line {
+    stroke: #8fbc8f;
+    stroke-width: 0.2vmin;
+    stroke-opacity: 1;
+  }
+
+  .year-2019-Berlin text {
+    fill: #8fbc8f;
+  }
+
+  .year-2020-Berlin line {
+    stroke: #9acd32;
+    stroke-width: 0.2vmin;
+    stroke-opacity: 1;
+  }
+
+  .year-2020-Berlin text {
+    fill: #9acd32;
+  }
+
+  .year-2021-Berlin line {
+    stroke: #00ee00;
+    stroke-width: 0.2vmin;
+    stroke-opacity: 1;
+  }
+
+  .year-2021-Berlin text {
+    fill: #00ee00;
+  }
+
+  .year-2022-Berlin line {
+    stroke: #006400;
+    stroke-width: 0.2vmin;
+    stroke-opacity: 1;
+  }
+
+  .year-2022-Berlin text {
+    fill: #006400;
+  }
+
+  .year-2019-München line {
+    stroke: #ffe4c4;
+    stroke-width: 0.2vmin;
+    stroke-opacity: 1;
+  }
+
+  .year-2019-München text {
+    fill: #ffe4c4;
+  }
+
+  .year-2020-München line {
+    stroke: #ff7f50;
+    stroke-width: 0.2vmin;
+    stroke-opacity: 1;
+  }
+
+  .year-2020-München text {
+    fill: #ff7f50;
+  }
+
+  .year-2021-München line {
+    stroke: #f08080;
+    stroke-width: 0.2vmin;
+    stroke-opacity: 1;
+  }
+
+  .year-2021-München text {
+    fill: #f08080;
+  }
+
+  .year-2022-München line {
+    stroke: #8b4726;
+    stroke-width: 0.2vmin;
+    stroke-opacity: 1;
+  }
+
+  .year-2022-München text {
+    fill: #8b4726;
   }
 
   .axis-value line.faint {

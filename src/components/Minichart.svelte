@@ -25,12 +25,35 @@
     2022: "0",
   };
 
-  var colorCode = {
+  var colorCode = new Map();
+
+  colorCode.set("Mannheim", {
     2019: "#F88379",
     2020: "#FF3131",
     2021: "#A52A2A",
     2022: "#630330",
-  };
+  });
+
+  colorCode.set("Stuttgart", {
+    2019: "#ADD8E6",
+    2020: "#7FFFD4",
+    2021: "#00BFFF",
+    2022: "#00008B",
+  });
+
+  colorCode.set("Berlin", {
+    2019: "#8FBC8F",
+    2020: "#9ACD32",
+    2021: "#00EE00",
+    2022: "#006400",
+  });
+
+  colorCode.set("München", {
+    2019: "#FFE4C4",
+    2020: "#FF7F50",
+    2021: "#F08080",
+    2022: "#8B4726",
+  });
 
   function createTicks(d) {
     var diff = d[1] - d[0];
@@ -81,7 +104,7 @@
     <MiniLine
       {dateScale}
       {valueScale}
-      {colorCode}
+      colorCode={colorCode.get(city)}
       {dashCode}
       {year}
       data={data.get(year)}
