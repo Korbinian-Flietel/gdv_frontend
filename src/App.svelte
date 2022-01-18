@@ -108,6 +108,9 @@
     }
     domain = [0, max];
   }
+  function set_value() {
+    values = [1613525593, 1627578248];
+  }
 </script>
 
 {#if data.size}
@@ -248,6 +251,7 @@
           <option value="so2">so2</option>
           <option value="no2">no2</option>
         </select>
+        <button on:click={set_value}> Click me! </button>
 
         <RangeSlider
           id="color-pips"
