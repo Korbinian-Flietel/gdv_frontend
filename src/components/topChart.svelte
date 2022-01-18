@@ -108,9 +108,9 @@
       }
       let avr = sum / elements;
       if (max > avr * 10) {
-        mini_domain.set(ke, c.set(type, [0, avr * 10]));
+        mini_domain.set(ke, c.set(type, [-avr * 10 * 0.1, avr * 10]));
       } else {
-        mini_domain.set(ke, c.set(type, [0, max]));
+        mini_domain.set(ke, c.set(type, [-max * 0.1, max]));
       }
     }
     mini_domain = mini_domain;
