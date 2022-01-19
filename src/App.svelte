@@ -80,11 +80,23 @@
           return o.value;
         })
       );
-      if (max < p) {
-        max = p;
+      var avr =
+        value.get(s).reduce(function (a, b) {
+          return a + b.value;
+        }, 0) / value.get(s).length;
+
+      console.log(p, avr);
+      if (p > avr * 10) {
+        if (avr * 10 > max) {
+          max = avr * 10;
+        }
+      } else {
+        if (max < p) {
+          max = p;
+        }
       }
     }
-    m = [0, max];
+    m = [-max * 0.1, max];
   }
 
   function getDomain(s) {
