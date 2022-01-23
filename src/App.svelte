@@ -59,7 +59,6 @@
   }
 
   function togle() {
-    console.log(this.id);
     if (reach_down.has(this.id)) {
       reach_down.delete(this.id);
       reach_down = reach_down;
@@ -121,7 +120,18 @@
     domain = [0, max];
   }
   function set_value() {
-    values = [1613525593, 1627578248];
+    switch (this.id) {
+      case "sylvester_a":
+        values = [1576171566, 1580231222];
+        break;
+      case "sylvester_b":
+        values = [1607816063, 1611042969];
+        break;
+      case "sandsturm":
+        values = [1612604375, 1615518999];
+      default:
+        break;
+    }
   }
 </script>
 
@@ -390,7 +400,6 @@
             stroke-width="2.46888"
             opacity="0.8"
             transform="matrix(0.2187,0,0,0.2187,61.9098,190.519)"
-            class="sm_location_2"
             style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.8; cursor: pointer;"
             id="Stuttgart"
             on:click={togle}
@@ -407,9 +416,8 @@
             stroke-width="2.46888"
             opacity="0.8"
             transform="matrix(0.2187,0,0,0.2187,106.6534,208.2417)"
-            class="sm_location_3"
             style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.8; cursor: pointer;"
-            id="Stuttgart"
+            id="München"
             on:click={togle}
           /></svg
         >
@@ -417,10 +425,28 @@
           <option value="pm10">pm10</option>
           <option value="co">co</option>
           <option value="o3">o3</option>
-          <option value="so2">so2</option>
           <option value="no2">no2</option>
         </select>
-        <button on:click={set_value}> Click me! </button>
+        <div class="interesting">
+          <button
+            id="sylvester_a"
+            class="glow-on-hover"
+            type="button"
+            on:click={set_value}>Sylvester ohne Corona</button
+          >
+          <button
+            id="sylvester_b"
+            class="glow-on-hover"
+            type="button"
+            on:click={set_value}>Sylvester mit Corona</button
+          >
+          <button
+            id="sandsturm"
+            class="glow-on-hover"
+            type="button"
+            on:click={set_value}>Sandstrum über Deutschland</button
+          >
+        </div>
 
         <RangeSlider
           id="color-pips"
@@ -449,10 +475,117 @@
     width: 100%;
   }
 
+  .interesting {
+    position: absolute;
+    top: 10px;
+    width: 50%;
+    display: block;
+  }
+
+  #sylvester_a {
+    margin-top: 5vh;
+    margin-left: 1.5vw;
+    width: 220px;
+    height: 50px;
+  }
+
+  #sylvester_b {
+    margin-top: 2.5vh;
+    margin-left: 1.5vw;
+    width: 220px;
+    height: 50px;
+  }
+
+  #sandsturm {
+    margin-top: 2.5vh;
+    margin-left: 1.5vw;
+    width: 220px;
+    height: 50px;
+  }
+
+  .glow-on-hover {
+    border: none;
+    outline: none;
+    color: #000;
+    background: #fff;
+    cursor: pointer;
+    position: relative;
+    border: #000;
+    z-index: 0;
+    border-radius: 10px;
+  }
+
+  .glow-on-hover:before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #ff0000,
+      #ff7300,
+      #fffb00,
+      #48ff00,
+      #00ffd5,
+      #002bff,
+      #7a00ff,
+      #ff00c8,
+      #ff0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+  }
+
+  .glow-on-hover:active {
+    color: #000;
+  }
+
+  .glow-on-hover:active:after {
+    background: transparent;
+  }
+
+  .glow-on-hover:hover:before {
+    opacity: 1;
+  }
+
+  .glow-on-hover:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+  svg {
+    margin-left: 30%;
+  }
+
   main {
     text-align: center;
     max-width: 240px;
     margin: 0 auto;
+  }
+
+  @keyframes glowing {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
   }
 
   @media (min-width: 640px) {

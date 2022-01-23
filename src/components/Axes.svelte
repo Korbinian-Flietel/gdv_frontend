@@ -194,13 +194,13 @@
   }
 
   .year-2021-Berlin line {
-    stroke: #00ee00;
+    stroke: #228b22;
     stroke-width: 0.2vmin;
     stroke-opacity: 1;
   }
 
   .year-2021-Berlin text {
-    fill: #00ee00;
+    fill: #228b22;
   }
 
   .year-2022-Berlin line {
