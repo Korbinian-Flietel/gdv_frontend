@@ -12,7 +12,7 @@
     .line()
     .x((d) => dateScale(d.timeStamp))
     .y((d) => valueScale(d.value))
-    .curve(d3.curveBasis);
+    .curve(d3.curveLinear);
 </script>
 
 <g class="temperature-line">
