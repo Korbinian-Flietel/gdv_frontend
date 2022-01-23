@@ -161,7 +161,7 @@
             stroke-width="2.3145749999999996"
             stroke-linejoin="round"
             transform="matrix(0.2187,0,0,0.2187,0,0)"
-            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1; cursor: pointer; stroke-opacity: 1; stroke-linejoin: round; fill-opacity: 1;"
+            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1; stroke-opacity: 1; stroke-linejoin: round; fill-opacity: 1;"
             fill-opacity="1"
           /><path
             fill="#88a4bc"
@@ -173,7 +173,7 @@
             stroke-width="2.3145749999999996"
             stroke-linejoin="round"
             transform="matrix(0.2187,0,0,0.2187,0,0)"
-            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1; cursor: pointer; stroke-opacity: 1; stroke-linejoin: round; fill-opacity: 1;"
+            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1; stroke-opacity: 1; stroke-linejoin: round; fill-opacity: 1;"
             fill-opacity="1"
           /><path
             fill="#88a4bc"
@@ -185,7 +185,7 @@
             stroke-width="2.3145749999999996"
             stroke-linejoin="round"
             transform="matrix(0.2187,0,0,0.2187,0,0)"
-            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1; cursor: pointer; stroke-opacity: 1; stroke-linejoin: round; fill-opacity: 1;"
+            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1; stroke-opacity: 1; stroke-linejoin: round; fill-opacity: 1;"
             fill-opacity="1"
           /><path
             fill="#88a4bc"
@@ -197,7 +197,7 @@
             stroke-width="2.3145749999999996"
             stroke-linejoin="round"
             transform="matrix(0.2187,0,0,0.2187,0,0)"
-            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1; cursor: pointer; stroke-opacity: 1; stroke-linejoin: round; fill-opacity: 1;"
+            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1; stroke-opacity: 1; stroke-linejoin: round; fill-opacity: 1;"
             fill-opacity="1"
           /><path
             fill="#88a4bc"
@@ -209,7 +209,7 @@
             stroke-width="2.3145749999999996"
             stroke-linejoin="round"
             transform="matrix(0.2187,0,0,0.2187,0,0)"
-            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1; cursor: pointer; stroke-opacity: 1; stroke-linejoin: round; fill-opacity: 1;"
+            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1; stroke-opacity: 1; stroke-linejoin: round; fill-opacity: 1;"
             fill-opacity="1"
           /><path
             fill="#88a4bc"
@@ -221,7 +221,7 @@
             stroke-width="2.3145749999999996"
             stroke-linejoin="round"
             transform="matrix(0.2187,0,0,0.2187,0,0)"
-            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1; cursor: pointer; stroke-opacity: 1; stroke-linejoin: round; fill-opacity: 1;"
+            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1; stroke-opacity: 1; stroke-linejoin: round; fill-opacity: 1;"
             fill-opacity="1"
           /><path
             fill="#88a4bc"
@@ -233,7 +233,7 @@
             stroke-width="2.3145749999999996"
             stroke-linejoin="round"
             transform="matrix(0.2187,0,0,0.2187,0,0)"
-            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1; cursor: pointer; stroke-opacity: 1; stroke-linejoin: round; fill-opacity: 1;"
+            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1; stroke-opacity: 1; stroke-linejoin: round; fill-opacity: 1;"
             fill-opacity="1"
           /><path
             fill="#88a4bc"
@@ -245,7 +245,7 @@
             stroke-width="2.3145749999999996"
             stroke-linejoin="round"
             transform="matrix(0.2187,0,0,0.2187,0,0)"
-            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1; cursor: pointer; stroke-opacity: 1; stroke-linejoin: round; fill-opacity: 1;"
+            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1; stroke-opacity: 1; stroke-linejoin: round; fill-opacity: 1;"
             fill-opacity="1"
           /><path
             fill="#88a4bc"
@@ -257,7 +257,7 @@
             stroke-width="2.3145749999999996"
             stroke-linejoin="round"
             transform="matrix(0.2187,0,0,0.2187,0,0)"
-            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1; cursor: pointer; stroke-opacity: 1; stroke-linejoin: round; fill-opacity: 1;"
+            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1; stroke-opacity: 1; stroke-linejoin: round; fill-opacity: 1;"
             fill-opacity="1"
           /><path
             fill="#88a4bc"
@@ -269,7 +269,7 @@
             stroke-width="2.3145749999999996"
             stroke-linejoin="round"
             transform="matrix(0.2187,0,0,0.2187,0,0)"
-            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1; cursor: pointer; stroke-opacity: 1; stroke-linejoin: round; fill-opacity: 1;"
+            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1; stroke-opacity: 1; stroke-linejoin: round; fill-opacity: 1;"
             fill-opacity="1"
           /><path
             fill="#88a4bc"
@@ -281,7 +281,7 @@
             stroke-width="2.3145749999999996"
             stroke-linejoin="round"
             transform="matrix(0.2187,0,0,0.2187,0,0)"
-            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1; cursor: pointer; stroke-opacity: 1; stroke-linejoin: round; fill-opacity: 1;"
+            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1; stroke-opacity: 1; stroke-linejoin: round; fill-opacity: 1;"
             fill-opacity="1"
           /><path
             fill="#88a4bc"
@@ -293,7 +293,7 @@
             stroke-width="2.3145749999999996"
             stroke-linejoin="round"
             transform="matrix(0.2187,0,0,0.2187,0,0)"
-            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1; cursor: pointer; stroke-opacity: 1; stroke-linejoin: round; fill-opacity: 1;"
+            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1; stroke-opacity: 1; stroke-linejoin: round; fill-opacity: 1;"
             fill-opacity="1"
           /><path
             fill="#88a4bc"
@@ -305,7 +305,7 @@
             stroke-width="2.3145749999999996"
             stroke-linejoin="round"
             transform="matrix(0.2187,0,0,0.2187,0,0)"
-            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1; cursor: pointer; stroke-opacity: 1; stroke-linejoin: round; fill-opacity: 1;"
+            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1; stroke-opacity: 1; stroke-linejoin: round; fill-opacity: 1;"
             fill-opacity="1"
           /><path
             fill="#88a4bc"
@@ -317,7 +317,7 @@
             stroke-width="2.3145749999999996"
             stroke-linejoin="round"
             transform="matrix(0.2187,0,0,0.2187,0,0)"
-            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1; cursor: pointer; stroke-opacity: 1; stroke-linejoin: round; fill-opacity: 1;"
+            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1; stroke-opacity: 1; stroke-linejoin: round; fill-opacity: 1;"
             fill-opacity="1"
           /><path
             fill="#88a4bc"
@@ -329,7 +329,7 @@
             stroke-width="2.3145749999999996"
             stroke-linejoin="round"
             transform="matrix(0.2187,0,0,0.2187,0,0)"
-            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1; cursor: pointer; stroke-opacity: 1; stroke-linejoin: round; fill-opacity: 1;"
+            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1; stroke-opacity: 1; stroke-linejoin: round; fill-opacity: 1;"
             fill-opacity="1"
           /><path
             fill="#88a4bc"
@@ -341,7 +341,7 @@
             stroke-width="2.3145749999999996"
             stroke-linejoin="round"
             transform="matrix(0.2187,0,0,0.2187,0,0)"
-            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1; cursor: pointer; stroke-opacity: 1; stroke-linejoin: round; fill-opacity: 1;"
+            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1; stroke-opacity: 1; stroke-linejoin: round; fill-opacity: 1;"
             fill-opacity="1"
           /><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" /><rect
             x="142.8537261554635"
@@ -358,8 +358,9 @@
             transform="matrix(0.2187,0,0,0.2187,140.5416,80.5131)"
             class="sm_location_0"
             style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.8; cursor: pointer;"
+            id="Berlin"
+            on:click={togle}
           /><rect
-          id="Mannheim"
             x="25.428269162410125"
             y="180.66751110506638"
             width="74.0664"
@@ -374,6 +375,8 @@
             transform="matrix(0.2187,0,0,0.2187,48.7997,170.0846)"
             class="sm_location_1"
             style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.8; cursor: pointer;"
+            id="Mannheim"
+            on:click={togle}
           /><rect
             x="42.208589973129996"
             y="206.8226211351557"
@@ -389,6 +392,8 @@
             transform="matrix(0.2187,0,0,0.2187,61.9098,190.519)"
             class="sm_location_2"
             style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.8; cursor: pointer;"
+            id="Stuttgart"
+            on:click={togle}
           /><rect
             x="99.47831658082478"
             y="229.50690114377815"
@@ -404,6 +409,8 @@
             transform="matrix(0.2187,0,0,0.2187,106.6534,208.2417)"
             class="sm_location_3"
             style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.8; cursor: pointer;"
+            id="Stuttgart"
+            on:click={togle}
           /></svg
         >
         <select id="select" on:change={update({ t })}>
@@ -442,18 +449,6 @@
     width: 100%;
   }
 
-  #Berlin:hover {
-    cursor: pointer;
-  }
-  #Stuttgart:hover {
-    cursor: pointer;
-  }
-  #Mannheim:hover {
-    cursor: pointer;
-  }
-  #München:hover {
-    cursor: pointer;
-  }
   main {
     text-align: center;
     max-width: 240px;
