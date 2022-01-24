@@ -174,7 +174,7 @@
     {/if}
   {:else}
     <div class="informationen">
-      <h2>Warum?</h2>
+      <h2>Warum gibt es diese Seite?</h2>
 
       <p class="infotxt">
         Diese Website entstand im Rahmen des Kurses <strong>GDV</strong> (<em
@@ -188,15 +188,20 @@
         zu untersuchen, insbesondere die Entwicklung seit Ausbruch der Coronapandemie.
       </p>
 
-      <h2>Was?</h2>
+      <h2>Welche Daten wurden genutzt?</h2>
       <p class="infotxt">
-        Es wurden die Daten der <a href="https://www.mvv.de/">MVV</a> und des
+        Mithilfe der <a href="https://www.mvv.de/">MVV</a> und des
         <a href="https://www.umweltbundesamt.de/">Umweltbundesamts</a>
-        genutzt, diese wurden zu einem täglichen Maximalwert zusammengefasst. Es
-        wurden die Daten der Letzten 3 Jahre verwendet.
+        wurden Daten für die Städte
+        <span style="color:{colorCode['Mannheim']}">Mannheim</span>,
+        <span style="color:{colorCode['München']}">München</span>,
+        <span style="color:{colorCode['Stuttgart']}">Stuttgart</span>
+        & <span style="color:{colorCode['Berlin']}">Berlin</span> gesammelt. Diese
+        wurden zu einem täglichen Maximalwert zusammengefasst. Es wurden die Daten
+        der Letzten 3 Jahre verwendet.
       </p>
 
-      <h2>Wie?</h2>
+      <h2>Wie benutze ich diese Seite?</h2>
       <p class="infotxt">
         Zur einfacheren Bedienung gibt es in der oberen linken Ecke
         <strong on:mouseenter={activate} on:mouseleave={deactivate}
@@ -212,6 +217,12 @@
         Entwicklungen zu ermöglichen.<br />
         Bei Auswahl einer Stadt wechselt dieser Text zu einem detailliertem Chart,
         der die Entwicklung im ausgewählten Zeitintervall anzeigt.
+      </p>
+      <br />
+      <br />
+      <br />
+      <p>
+        <a href="https://github.com/Korbinian-Flietel/gdv_frontend">GitHub</a>
       </p>
     </div>
   {/if}
