@@ -174,7 +174,7 @@
     {/if}
   {:else}
     <div class="informationen">
-      <h1>Warum?</h1>
+      <h2>Warum?</h2>
 
       <p class="infotxt">Diese Website entstand im Rahmen des Kurses <strong>GDV</strong> (<em
         >Grundlagen der Datenvisualisierung</em
@@ -188,14 +188,13 @@
       <strong>Luftqualität</strong>
       zu untersuchen, insbesondere die Entwicklung seit Ausbruch der Coronapandemie.</p>
 
-      <br /><br />
-      <h1>Was?</h1>
+      <h2>Was?</h2>
       <p class ="infotxt">Es wurden die Daten der <a href="https://www.mvv.de/">MVV</a> und des
       <a href="https://www.umweltbundesamt.de/">Umweltbundesamts</a>
       genutzt, diese wurden zu einem täglichen Maximalwert zusammengefasst.
-      Es wurden die Daten der Letzten 3 Jahre verwendet.</p> <br />
+      Es wurden die Daten der Letzten 3 Jahre verwendet.</p> 
 
-      <h1>Wie?</h1>
+      <h2>Wie?</h2>
       <p class ="infotxt">Zur einfacheren Bedienung gibt es in der oberen linken Ecke
       <strong on:mouseenter={activate} on:mouseleave={deactivate}
         >Buttons,</strong
@@ -226,7 +225,7 @@
   .informationen {
     margin-top: 5vh;
     font: 1.3em sans-serif;
-    width: 50%;
+    width: 60%;
     display: block;
     margin-left: auto;
     margin-right: auto;
