@@ -189,9 +189,9 @@
       zu untersuchen, insbesondere die Entwicklung seit Ausbruch der Coronapandemie.</p>
 
       <h2>Welche Daten wurden genutzt?</h2>
-      <p class ="infotxt">Es wurden die Daten der <a href="https://www.mvv.de/">MVV</a> und des
+      <p class ="infotxt">Mithilfe der <a href="https://www.mvv.de/">MVV</a> und des
       <a href="https://www.umweltbundesamt.de/">Umweltbundesamts</a>
-      genutzt, diese wurden zu einem täglichen Maximalwert zusammengefasst.
+      wurden Daten für die Städte <span style="color:{colorCode["Mannheim"]}">Mannheim</span>, <span style="color:{colorCode["München"]}">München</span>, <span style="color:{colorCode["Stuttgart"]}">Stuttgart</span> & <span style="color:{colorCode["Berlin"]}">Berlin</span> gesammelt. Diese wurden zu einem täglichen Maximalwert zusammengefasst.
       Es wurden die Daten der Letzten 3 Jahre verwendet.</p> 
 
       <h2>Wie benutze ich diese Seite?</h2>
