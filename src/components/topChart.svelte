@@ -70,6 +70,30 @@
     }
   }
 
+  var save = "";
+
+  function focus() {
+    if (this.style.float == "none") {
+      this.style.width = "49%";
+      this.style.height = "50%";
+      this.style.left = save;
+      this.style.float = "left";
+      this.style.zoom = "100%";
+      this.style.position = "relative";
+      this.style.top = "0";
+      this.style.zIndex = "0";
+    } else {
+      this.style.top = "-6.5%";
+      save = this.style.left;
+      this.style.left = "40%";
+      this.style.width = "60%";
+      this.style.zoom = "150%";
+      this.style.float = "none";
+      this.style.position = "absolute";
+      this.style.zIndex = "1";
+    }
+  }
+
   var colorCode = {
     Mannheim: "#F0431E",
     München: "#EDF01E",
@@ -81,7 +105,7 @@
 <div class="chart">
   {#if data.size > 0}
     {#each [...reach_down] as [k, v]}
-      <div id={k} bind:clientHeight={h} bind:clientWidth={w}>
+      <div on:click={focus} id={k} bind:clientHeight={h} bind:clientWidth={w}>
         <Minichart
           city={k}
           height={h}

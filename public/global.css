@@ -27,9 +27,13 @@ a {
 
 .chart {
   width: 60%;
+  overflow: hidden;
   min-width: 700px;
   height: 40vh;
   float: left;
+  margin-top: 0;
+  user-select: none;
+
   /*padding: 15px;*/
   /*border: 1px solid red;*/
 }
@@ -39,8 +43,9 @@ a {
   min-height: 600px;
   min-width: 1200px;
   width: 100%;
-  height: 60vh;
+  height: 59vh;
   float: left;
+  overflow: hidden;
   /*border: 1px solid red;*/
 }
 

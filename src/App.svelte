@@ -444,6 +444,7 @@
           id="color-pips"
           bind:values
           formatter={(v) => new Date(v * 1000).toLocaleDateString("de-DE")}
+          style="overflow: visible;"
           min={floorDate}
           max={ceil}
           range
@@ -453,6 +454,7 @@
         />
       </div>
     </div>
+    <div id="detail" />
     <TopChart data={new Map(data)} type={t} domain={m} />
     <Chart data={reach_down} type={t} dates={values} {domain} />
   </main>
