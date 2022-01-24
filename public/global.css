@@ -19,6 +19,7 @@ a {
   width: 40%;
   min-width: 500px;
   height: 40vh;
+  min-height: 500px;
   float: left;
   margin-top: 0;
   /*border: 1px solid red;*/

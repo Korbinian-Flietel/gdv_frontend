@@ -463,6 +463,7 @@
 <style>
   .map {
     padding-top: 0;
+    min-width: 370px;
     height: 100%;
     width: 100%;
   }
@@ -470,7 +471,7 @@
   .interesting {
     position: absolute;
     top: 10px;
-    width: 50%;
+    width: 30%;
     display: block;
   }
 
