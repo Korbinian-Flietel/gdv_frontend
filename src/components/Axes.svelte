@@ -214,33 +214,34 @@
   }
 
   .year-2019-München line {
-    stroke: #ffe4c4;
-    stroke-width: 0.2vmin;
-    stroke-opacity: 1;
-  }
-
-  .year-2019-München text {
-    fill: #ffe4c4;
-  }
-
-  .year-2020-München line {
     stroke: #ff7f50;
     stroke-width: 0.2vmin;
     stroke-opacity: 1;
   }
 
-  .year-2020-München text {
+  .year-2019-München text {
     fill: #ff7f50;
   }
 
-  .year-2021-München line {
+  .year-2020-München line {
     stroke: #f08080;
+
+    stroke-width: 0.2vmin;
+    stroke-opacity: 1;
+  }
+
+  .year-2020-München text {
+    fill: #f08080;
+  }
+
+  .year-2021-München line {
+    stroke: #ff6347;
     stroke-width: 0.2vmin;
     stroke-opacity: 1;
   }
 
   .year-2021-München text {
-    fill: #f08080;
+    fill: #ff6347;
   }
 
   .year-2022-München line {

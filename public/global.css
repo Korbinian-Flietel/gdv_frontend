@@ -11,6 +11,10 @@
   background-color: rgb(230, 230, 230);
 }
 
+a {
+  text-decoration: none;
+}
+
 .main {
   width: 40%;
   min-width: 500px;

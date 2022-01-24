@@ -10,19 +10,11 @@
   var data = [];
   var domain = [];
   var m = [];
-  var floorDate =
-    new Date(
-      new Date().getFullYear() - 3,
-      new Date().getMonth(),
-      new Date().getDate()
-    ).getTime() / 1000; // was oben links steht
-  let ceil =
-    new Date(
-      new Date().getFullYear(),
-      new Date().getMonth(),
-      new Date().getDate()
-    ).getTime() / 1000;
+
+  let ceil = 1642149303;
   let values = [ceil - 7890000, ceil];
+
+  var floorDate = ceil - 94608000;
 
   var reach_down = new Map();
 
@@ -432,19 +424,19 @@
             id="sylvester_a"
             class="glow-on-hover"
             type="button"
-            on:click={set_value}>Sylvester ohne Corona</button
+            on:click={set_value}>Silvester ohne Corona</button
           >
           <button
             id="sylvester_b"
             class="glow-on-hover"
             type="button"
-            on:click={set_value}>Sylvester mit Corona</button
+            on:click={set_value}>Silvester mit Corona</button
           >
           <button
             id="sandsturm"
             class="glow-on-hover"
             type="button"
-            on:click={set_value}>Sandstrum über Deutschland</button
+            on:click={set_value}>Sandsturm über Deutschland</button
           >
         </div>
 
@@ -543,12 +535,8 @@
     border-radius: 10px;
   }
 
-  .glow-on-hover:active {
-    color: #000;
-  }
-
   .glow-on-hover:active:after {
-    background: transparent;
+    background: lightgray;
   }
 
   .glow-on-hover:hover:before {
