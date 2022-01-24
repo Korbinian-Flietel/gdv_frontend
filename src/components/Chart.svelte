@@ -180,9 +180,11 @@
         Diese Website entstand im Rahmen des Kurses <strong>GDV</strong> (<em
           >Grundlagen der Datenvisualisierung</em
         >) an der Hochschule Mannheim betreut von Prof.
-        <a
-          href="https://services.informatik.hs-mannheim.de/~nagel/"
-          style="text-decoration: none;">Till Nagel</a
+        <strong
+          ><a
+            href="https://services.informatik.hs-mannheim.de/~nagel/"
+            style="text-decoration: none;">Till Nagel</a
+          ></strong
         >. Sie dient dazu vier ausgewählte Städte im Hinblick auf ihre
         <strong>Luftqualität</strong>
         zu untersuchen, insbesondere die Entwicklung seit Ausbruch der Coronapandemie.
@@ -190,8 +192,12 @@
 
       <h2>Welche Daten wurden genutzt?</h2>
       <p class="infotxt">
-        Mithilfe der <a href="https://www.mvv.de/">MVV</a> und des
-        <a href="https://www.umweltbundesamt.de/">Umweltbundesamts</a>
+        Mithilfe der <strong><a href="https://www.mvv.de/">MVV</a></strong> und
+        des
+        <strong
+          ><a href="https://www.umweltbundesamt.de/">Umweltbundesamts</a
+          ></strong
+        >
         wurden Daten für die Städte
         <span style="color:{colorCode['Mannheim']}">Mannheim</span>,
         <span style="color:{colorCode['München']}">München</span>,
@@ -222,7 +228,10 @@
       <br />
       <br />
       <p>
-        <a href="https://github.com/Korbinian-Flietel/gdv_frontend">GitHub</a>
+        <strong
+          ><a href="https://github.com/Korbinian-Flietel/gdv_frontend">GitHub</a
+          ></strong
+        >
       </p>
     </div>
   {/if}
