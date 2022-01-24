@@ -176,39 +176,40 @@
     <div class="informationen">
       <h1>Warum?</h1>
 
-      Diese Website entstand im Rahmen des Kurses<strong>GDV</strong> (<em
+      <p class="infotxt">Diese Website entstand im Rahmen des Kurses <strong>GDV</strong> (<em
         >Grundlagen der Datenvisualisierung</em
       >) an der Hochschule Mannheim betreut von Prof.
       <a
         href="https://services.informatik.hs-mannheim.de/~nagel/"
         style="text-decoration: none;">Till Nagel</a
-      >.<br />
+      >.
 
       Sie dient dazu vier ausgewählte Städte im Hinblick auf ihre
       <strong>Luftqualität</strong>
-      zu untersuchen, insbesondere die Entwicklung seit Ausbruch der Coronapandemie.
+      zu untersuchen, insbesondere die Entwicklung seit Ausbruch der Coronapandemie.</p>
 
       <br /><br />
       <h1>Was?</h1>
-      Es wurden die Daten der<a href="https://www.mvv.de/">MVV</a> und des
+      <p class ="infotxt">Es wurden die Daten der <a href="https://www.mvv.de/">MVV</a> und des
       <a href="https://www.umweltbundesamt.de/">Umweltbundesamts</a>
       genutzt, diese wurden zu einem täglichen Maximalwert zusammengefasst.
-      <br />
-      Es wurden die Daten der Letzten 3 Jahre verwendet <br />
-      Zur einfacheren Bedienung gibt es in der oberen linken Ecke
+      Es wurden die Daten der Letzten 3 Jahre verwendet.</p> <br />
+
+      <h1>Wie?</h1>
+      <p class ="infotxt">Zur einfacheren Bedienung gibt es in der oberen linken Ecke
       <strong on:mouseenter={activate} on:mouseleave={deactivate}
-        >Buttons</strong
+        >Buttons,</strong
       >
       die als Schnellauswahl möglicher interessanter Ereignisse dienen.
       <br />
       Die Karte dient zur Menüführung, Städte können zur näheren Untersuchung per
       Click an und abgewählt werden. <br />
-      Über das Dropdownmenü lässt sich die Schadstofftyp ändern.<br />
+      Über das Dropdownmenü lässt sich der Schadstofftyp ändern.<br />
       Die Graphen oben rechts vergleichen alle Städte, im Hinblick auf den ausgewählten
       Schadstofftyp, mit sich selbst nach Jahren um einen Eindruck über langfristige
-      Enwicklungen zu ermöglichen.<br />
-      Bei Auswahl einer Stadt weicht dieser Text dem detailliertem Chart, der die
-      Enwicklung im ausgewählten Zeitintervall anzeigt.
+      Entwicklungen zu ermöglichen.<br />
+      Bei Auswahl einer Stadt wechselt dieser Text zu einem detailliertem Chart, der die
+      Entwicklung im ausgewählten Zeitintervall anzeigt.</p>
     </div>
     <p>{dates}</p>
     <p>{domain}</p>
@@ -224,7 +225,15 @@
 
   .informationen {
     margin-top: 5vh;
-    font: 1em sans-serif;
+    font: 1.3em sans-serif;
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .infotxt{
+    text-align: justify;
   }
 
   .city-labels {
@@ -236,6 +245,7 @@
     width: 5vw;
   }
 
+  
   .city {
     margin-left: 0px;
   }
