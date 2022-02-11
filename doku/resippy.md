@@ -105,7 +105,7 @@ Wie in Abb. 1 zu sehen ist, lässt sich in Mannheim tatsächlich ein klarer Rüc
 Ob diese Verringerung jedoch auf die Corona Maßnahmen zurückzuführen ist, lässt sich mit voller Gewissheit allerdings nicht sagen. 
 Wichtig anzumerken ist hierbei, dass Mannheim in diesem Fall nur als Repräsentant dient, der NO2 Rückschritt lässt sich allerdings in jeder der 4 untersuchten Städte feststellen.
 
-![(Abb.1 Mini-Chart Mannheim – Selbstjahresvergleich NO2) ](Mini-Chart Mannheim - Selbsjahresvergleich NO2.jpg)
+![(Abb.1 Mini-Chart Mannheim – Selbstjahresvergleich NO2) ](doku\Mini-Chart Mannheim - Selbsjahresvergleich NO2.jpg)
 
 ### Events
 
