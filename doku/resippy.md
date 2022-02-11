@@ -1,4 +1,17 @@
- 
+---
+layout: page
+title:  "Template"
+subheadline: Ein Template für die Projektdoku [3-10 Wörter]
+teaser: "Dieses Markdown-Template zeigt einige Möglichkeiten für die Projektdokumentation"
+header: no
+show_meta: false
+categories:
+    - projects
+image:
+    title: meinProjekt/template-teaser.jpg
+    caption: Teaser
+author: Susanne Schneider &amp; Matthias Meier
+---
 # Luftqualität durch Corona
  
 ## Einführung
