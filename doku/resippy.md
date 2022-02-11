@@ -12,10 +12,13 @@ Die Auswirkungen der aufgesetzten Coronamaßnahmen machen sich in vielen Bereich
 Unsere erste Hürde lag darin eine Hypothese aufzustellen die diesem Thema gerecht wird. Eine Überlegung war es ob die Luftqualität, durch Coronamaßnahmen eine positive Auswirkung auf die Gesundheit der Menschen auswirke. Dies zu bestätigen, fiel schwer da unsere Datenmenge keine Aussage lieferte im Bezug zur Gesundheit. Dennoch haben wir untrersucht wie die Coronamaßnahmen im Allgemeinen Auswirkungen auf die Luftqualtität haben. Unsere Auswertungen liefern zb. für Feinstaub eine klare Verringerung über 3 Jahre hinweg. Vorallem einen großen Unterschied gab es an Silvester. Hier war der Feinstaub in Bundesländern ohne Feuerwerk-Einschränkungen um ein vielfaches höher als in anderen Bundesländern. Eine interessante Erkenntnis, welche uns vorher nicht bewusst war, aber durch die Visualisierung aufgefallen ist, ist der Saharasturm in Deutschland von Februar 2021. Hier gibt es an vielen Messstationen einen klaren Anstieg der Feinstaubwerte über 2-3Tage hinweg.
 
 ### Fragen & Hypothesen
+
 Haben die Coronamaßnahmen positiven Einfluss auf die Gesundheit im Bezug zur Luftqualität?
 - Dies zu bestätigen, fiel schwer da unsere Datenmenge keine Aussage lieferte im Bezug zur Gesundheit.
+
 Die Luftqualität hat sich pandemiebedingt aufgrund der Corona-Maßnahmen in den untersuchten Städten gebessert?
 -  Unsere Auswertungen lieferten eine klare Besserungen der Luftqualität über 3 Jahre konstant hinweg. Für Feinstaub zb. gab es einen großen Unterschied an Silvester. Hier war der Feinstaub in Bundesländern ohne Feuerwerk-Einschränkungen um ein vielfaches höher als in anderen Bundesländern. Eine interessante Erkenntnis, welche uns vorher nicht bewusst war, aber durch die Visualisierung aufgefallen ist, ist der Saharasturm in Deutschland von Februar 2021. Hier gibt es an vielen Messstationen einen klaren Anstieg der Feinstaubwerte über 2-3Tage hinweg.
+
 Hat sich die Luftqualität in den Jahren der Corona-Pandemie gebessert im Verhältnis zu dem vorherigen Jahr?
 - Unsere Auswertungen liefern zb. für Feinstaub eine klare Verringerung über 3 Jahre hinweg
 
