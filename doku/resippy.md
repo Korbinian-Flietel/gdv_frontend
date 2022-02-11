@@ -3,13 +3,13 @@
 ## Einführung
 
 ### Abstract 
-Nichts hat die globale und unsere alltägliche Welt zurzeit so im Griff wie die sogenannte „Corona-Krise“ und der Umgang mit dem neuartigen Virus SARS-CoV-2. Damit sich die hochansteckende Lungenkrankheit Covid-19, die aus dem Virus resultiert, nicht weiterhin ausbreitet und das deutsche Gesundheitssystem überlastet, sind im März 2020 verschiedene Maßnahmen von der deutschen Bundesregierung erlassen worden, wie beispielsweise eine Ausgangssperre in Bayern und anderen Bundesländern, die bundesweite Schließung von Schulen und Kitas, Geschäften, Cafés, Bars, Restaurants, Theatern und Kulturzentren oder ein generelles soziales (körperliches) Kontaktverbot.
+Nichts hat die globale und unsere alltägliche Welt zurzeit so im Griff wie die sogenannte „Corona-Krise“ und der Umgang mit dem neuartigen Virus SARS-CoV-2. Damit sich die hochansteckende Lungenkrankheit Covid-19, die aus dem Virus resultiert, nicht weiterhin ausbreitet und das deutsche Gesundheitssystem überlastet, sind im März 2020 verschiedene Maßnahmen von der deutschen Bundesregierung erlassen worden. Beispielsweise eine Ausgangssperre in Bayern und anderen Bundesländern, die bundesweite Schließung von Schulen und Kitas, Geschäften, Cafés, Bars, Restaurants, Theatern und Kulturzentren oder ein generelles soziales (körperliches) Kontaktverbot.
 In diesem Semster (WS21) war es unsere Aufgabe im Rahmen der GDV-Veranstaltung uns in Gruppen, ein aktuelles Thema unter die Lupe zu nehmen und es mit denen in der Vorlesung gelernten Visualisierungsarten, auch für andere Betrachter einfach und verständlich zu visualisieren.
 Das von unserer Gruppe genommene Thema war die Untersuchung der Luftqualität im Bezug zu den vom Bundesland abhängigen Corona Maßnahmen.
 
 ### Einleitung
 Die Auswirkungen der aufgesetzten Coronamaßnahmen machen sich in vielen Bereichen unseres alltäglichen Lebens bemerkbar. Aufgrund des breit gefächerten Einflusses auf diverse Themengebiete zum Thema Corona und Luftqualität, stießen wir in der Findungsphase unseres Projektes auf vielfältige Fragestellungen in den verschiedensten Bereichen, welche eine interessante Basis zur visuellen Aufbereitung und Analyse der damit verbundenen Datensätze boten. 
-Unsere erste Hürde lag darin eine Hypothese aufzustellen die diesem Thema gerecht wird. Eine Überlegung war es ob die Luftqualität, durch Coronamaßnahmen eine positive Auswirkung auf die Gesundheit der Menschen auswirke. Dies zu bestätigen, fiel schwer da unsere Datenmenge keine Aussage lieferte im Bezug zur Gesundheit. Dennoch haben wir untrersucht wie die Coronamaßnahmen im Allgemeinen Auswirkungen auf die Luftqualtität haben. Unsere Auswertungen liefern zb. für Feinstaub eine klare Verringerung über 3 Jahre hinweg. Vorallem einen großen Unterschied gab es an Silvester. Hier war der Feinstaub in Bundesländern ohne Feuerwerk-Einschränkungen um ein vielfaches höher als in anderen Bundesländern. Eine interessante Erkenntnis, welche uns vorher nicht bewusst war, aber durch die Visualisierung aufgefallen ist, ist der Saharasturm in Deutschland von Februar 2021. Hier gibt es an vielen Messstationen einen klaren Anstieg der Feinstaubwerte über 2-3Tage hinweg.
+Unsere erste Hürde lag darin eine Hypothese aufzustellen die diesem Thema gerecht wird. Eine Überlegung war es ob die Luftqualität, durch Coronamaßnahmen eine positive Auswirkung auf die Gesundheit der Menschen auswirke. Dies zu bestätigen, fiel schwer da unsere Datenmenge keine Aussage lieferte im Bezug zur Gesundheit. Dennoch haben wir untrersucht wie die Coronamaßnahmen im Allgemeinen Auswirkungen auf die Luftqualtität haben. Unsere Auswertungen liefern z.B. für Feinstaub eine klare Verringerung über 3 Jahre hinweg. Vorallem einen großen Unterschied gab es an Silvester. Hier war der Feinstaub in Bundesländern ohne Feuerwerk-Einschränkungen um ein vielfaches höher als in anderen Bundesländern. Eine interessante Erkenntnis, welche uns vorher nicht bewusst war, aber durch die Visualisierung aufgefallen ist, ist der Saharasturm in Deutschland von Februar 2021. Hier gibt es an vielen Messstationen einen klaren Anstieg der Feinstaubwerte über 2-3Tage hinweg.
 
 ### Fragen & Hypothesen
 
@@ -45,11 +45,11 @@ Beispiel Antwort: {
 
 Da wir bei den Daten des Umweltbundesamtes potentiell mehrere (0..x) Messwerte pro Stadt pro Schadstoff hatten bilden wir den Durchschnitt aller Gültiger Messwerte und schreiben diesen in unsere Datenbank
 
-// Bilder
+![](Korbi1.jpg)
 
 Für beide API-antworten haben wir die entsprechenden Schadstoffnamen zugeordnet, außerdem haben wir die Daten in Local Unix-Timestamps umgewandelt da diese leichter maschinell zu verarbeiten sind. Um anfragen an unsere API zu minimieren hat sie nur eine Schnittstelle um alle Daten die das Frontend benötigt bereitzustellen.
 
-// Bilder
+![](Korbi2.jpg)
 
 Da es sich um die Daten der Letzten drei Jahre handelt und es nicht performant wäre diese bei jeder Anfrage aus der Datenbank zu ziehen haben wir einen Cache implementiert der die Antwort Sortiert vor gespeichert hat. Wir bringen diesen Cache in einem min. Eintages Intervall auf den neusten Stand. Beispiel Json Struktur unserer API:
 3
@@ -63,7 +63,7 @@ Bei unserer explosiven Datenanalyse wurde relativ schnell klar das es wenig Sinn
 
 Ein Beispiel unserer EDA, in einem frühen Stadium des Projekts, war es herauszufinden ob lokale Coronamaßnahmen (Lockdown / Ausgangssperren) einen Messbaren Einfluss auf die Luftqualität hat.
 
-// Bilder
+![](Korbi3.jpg)
 
 Wir haben die Zeiträume der Lockdowns eingefärbt um zu erkennen ob es einen Offensichtlichen Zusammenhang zwischen Luftqualität und Maßnahmen gibt. Da dies nicht der Fall ist sind wir davon abgekommen lokale Maßnahmen mit untersuchen zu wollen.
 
@@ -105,8 +105,8 @@ Wie in Abb. 1 zu sehen ist, lässt sich in Mannheim tatsächlich ein klarer Rüc
 Ob diese Verringerung jedoch auf die Corona Maßnahmen zurückzuführen ist, lässt sich mit voller Gewissheit allerdings nicht sagen. 
 Wichtig anzumerken ist hierbei, dass Mannheim in diesem Fall nur als Repräsentant dient, der NO2 Rückschritt lässt sich allerdings in jeder der 4 untersuchten Städte feststellen.
 
-![ Abb.1 Mini-Chart Mannheim – Selbstjahresvergleich NO2 {*Abb.1 Mini-Chart Mannheim – Selbstjahresvergleich NO2* }](MiniChart_Mannheim.jpg "Mini-Chart Mannheim – Selbstjahresvergleich NO2")
-
+![ Abb.1 Mini-Chart Mannheim – Selbstjahresvergleich NO2 ](MiniChart_Mannheim.jpg "Mini-Chart Mannheim – Selbstjahresvergleich NO2")
+*Abb.1 Mini-Chart Mannheim – Selbstjahresvergleich NO2* 
 
 ### Events
 
