@@ -106,7 +106,7 @@ Ob diese Verringerung jedoch auf die Corona Maßnahmen zurückzuführen ist, lä
 Wichtig anzumerken ist hierbei, dass Mannheim in diesem Fall nur als Repräsentant dient, der NO2 Rückschritt lässt sich allerdings in jeder der 4 untersuchten Städte feststellen.
 
 ![ Abb.1 Mini-Chart Mannheim – Selbstjahresvergleich NO2 ](MiniChart_Mannheim.jpg "Mini-Chart Mannheim – Selbstjahresvergleich NO2")
-(Abb.1 Mini-Chart Mannheim – Selbstjahresvergleich NO2) 
+*Abb.1 Mini-Chart Mannheim – Selbstjahresvergleich NO2* 
 
 ### Events
 
@@ -118,17 +118,17 @@ Da sich die Silvesternacht gerade hinsichtlich, der Luftqualität anbietet genau
 Als einzig nennenswertes Hoch, sieht man hier nur Berlin, das mit 130 µg/m³ auch klar den Höchstwert dieses Tages erreicht. Den genauen Grund diesen Peak konnten wir leider nicht finden, jedoch ziehen wir in Betracht, dass die offiziellen Feuerwerke in Berlin hierbei eine große Rolle spielen könnte. 
 
 ![(Abb. 2 Silvester vor Corona – im Vergleich Berlin, Stuttgart, München, Mannheim)](Silvester_Vor_Corona.jpg "Silvester vor Corona – im Vergleich Berlin, Stuttgart, München, Mannheim")
-(Abb. 2 Silvester vor Corona – im Vergleich Berlin, Stuttgart, München, Mannheim)
+*Abb. 2 Silvester vor Corona – im Vergleich Berlin, Stuttgart, München, Mannheim*
 
 
 ![(Abb. 3 Silvester während Corona – im Vergleich Berlin, Stuttgart, München, Mannheim)](Silvester_Während_Corona.jpg "Silvester während Corona – im Vergleich Berlin, Stuttgart, München, Mannheim")
-(Abb. 3 Silvester während Corona – im Vergleich Berlin, Stuttgart, München, Mannheim)
+*Abb. 3 Silvester während Corona – im Vergleich Berlin, Stuttgart, München, Mannheim*
 ### Sahara Sturm
 
 Neben absehbaren, jährlichen Events gab es jedoch auch weitere nennenswerte Schwankungen innerhalb der Feinstaub (PM10) Messungen. So lässt sich auch der Sahara Sturm, der im Februar Deutschland erreichte, in der Feinstaubbelastung erkennen. Dieser Sorgte in allen 4 Städten für einen bemerkbaren Anstieg über mehrere Tage hinweg.  Events wie diese fielen uns erstmals währen der EDA auf und konnten erst nach Recherche fest zugeordnet werden.
 
 ![(Abb. 4 Sahara Sturm – im Vergleich Berlin, Stuttgart, München, Mannheim)](Sahara_Sturm.jpg "Sahara Sturm – im Vergleich Berlin, Stuttgart, München, Mannheim")
-(Abb. 4 Sahara Sturm – im Vergleich Berlin, Stuttgart, München, Mannheim)
+*Abb. 4 Sahara Sturm – im Vergleich Berlin, Stuttgart, München, Mannheim*
 
 ## Fazit 
 
